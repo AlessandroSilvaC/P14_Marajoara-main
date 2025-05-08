@@ -1,0 +1,194 @@
+*
+{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+    
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Estilo geral */
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+/*header*/
+header {
+    background-color: #eed9c4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: auto;
+    font-size: 2rem;
+}
+
+.img_logo {
+    height: 7rem;
+}
+
+.img_nav_login {
+    height: 3.75rem;
+}
+
+.nav_area_user {
+    display: flex;
+    align-items: baseline;
+    padding-right: 0.6rem;
+    position: relative; /* Necessário para posicionar o dropdown */
+}
+
+.dropdown-menu {
+    display: none; /* Esconde o menu por padrão */
+    position: absolute;
+    top: 50px; /* Ajuste para posicionar abaixo do ícone */
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    z-index: 1000;
+}
+
+.dropdown-menu a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    display: block;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f0f0f0;
+}
+
+/*Menu lateral*/
+.button-containter
+{
+    position: relative;
+    left: 6rem;
+    top: 6rem;    
+    background-color: #EED9C4;
+    padding: 3.125rem;
+    width: fit-content;
+    border: 1px solid #bd5612;
+}
+.button-containter .btn:hover{
+    background-color:  #d57617b1;
+}
+.btn
+{
+    
+    background-color: antiquewhite;
+    font-size: 1.5rem;
+    padding: 1.3rem;
+    margin: 0.3125rem 0px 0.3125rem 0px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.button-containter .btn a {
+    text-decoration: none;
+    color: #000;
+    
+}
+
+.button-containter .btn a:hover {
+    color: #ce6f17; /* Cor ao passar o mouse */
+    transition: color 0.1s ease; /* Animação suave */
+}
+/* Estilo para os links do menu lateral */
+.button-containter .btn a {
+    color: #000000; /* Cor padrão do texto */
+    text-decoration: none; /* Remove o sublinhado */
+    
+}
+
+/* Cor ao passar o mouse */
+.button-containter .btn a:hover {
+    color: #ce6f17; /* Cor ao passar o mouse */
+    transition: color 0.1s ease; /* Animação suave */
+}
+.menu-text {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    
+}
+
+/* Formulário de Reclamação */
+main {
+    position: relative; 
+    bottom: 23rem;
+    left: 20rem;
+    margin-left: 240px;
+    padding: 1px;
+    width: 60rem;
+    border: 1px solid #bd5612;  
+    border-radius: 2rem
+}
+
+.reclamacao-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 2rem;
+
+}
+
+.reclamacao-container h1 {
+    position: relative;
+    bottom: 6rem;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #000000;
+    
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    position: relative;
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+    bottom: 3rem;
+}
+
+.input-group input,
+.input-group textarea,
+.input-group select {
+    position: relative;
+    bottom: 3rem;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button[type="submit"] {
+    
+    position: relative;
+    bottom: 2rem;
+    background-color: #bd5612;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #a44b0f;
+}

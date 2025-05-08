@@ -1,0 +1,80 @@
+<!DOCTYPE html><html lang="pt-BR"><head>    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Login - Condomínio Marajoara</title>    <link rel="stylesheet" href="./Style/styles_tela_login.css">
+<link rel="stylesheet" href="../PI4_Marajoara-main/Pages/Morador/pagina_eventos.html">
+
+
+
+</head><body>    <header>        <h1>CONDOMÍNIO<br>MARAJOARA</h1>
+        <p>Sua segurança e conforto em primeiro lugar.</p>
+    </header>
+
+    <!-- Contêiner de Login -->
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm" onsubmit="redirectToEvents(event)">
+            <div class="input-group">
+                <label for="username">Usuário</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <form id="loginForm">
+                <button type="submit">Entrar</button>
+            </form>
+        </form>
+        <p class="forgot-password">
+            <a href="#" onclick="showRecoveryForm()">Esqueci minha senha</a>
+        </p>
+        <p>Não tem uma conta? <a href="#" onclick="showRegisterForm()">Cadastre-se</a></p>
+    </div>
+
+    <!-- Contêiner de Recuperação de Senha -->
+    <div id="recovery-container" class="recovery-container" style="display: none;">
+        <h2>Recuperação de Senha</h2>
+        <form id="recoveryForm">
+            <div class="input-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+        <p>
+            <a href="#" onclick="hideRecoveryForm()">Voltar ao login</a>
+        </p>
+    </div>
+
+    <!-- Contêiner de Cadastro -->
+    <div id="register-container" class="register-container" style="display: none;">
+        <h2>Cadastre-se</h2>
+        <form id="registerForm">
+            <div class="input-group">
+                <label for="fullName">Nome Completo</label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+            <div class="input-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="input-group">
+                <label for="confirmPassword">Confirme a Senha</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+            </div>
+            <div class="input-group">
+                <label for="phone">Número de Celular</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <button type="submit">Cadastrar</button>
+        </form>
+        <p>
+            <a href="#" onclick="hideRegisterForm()">Voltar ao login</a>
+        </p>
+    </div>
+
+    <script src="./Scripts/script_login.js"></script>
+</body>
+</html>
