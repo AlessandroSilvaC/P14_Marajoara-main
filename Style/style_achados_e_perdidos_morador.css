@@ -68,23 +68,24 @@ header
 .container
 {
     position: relative;
-    background-color: #eed9c4;
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
     padding: 1.2rem  1.5rem 1.5rem 1.5rem;
     border-radius: 1.5rem;
-    width: fit-content;
+    width: 80rem;
     margin-top: 2rem;
     font-size: 1.5rem;
     border:  1px solid#bd5612;
-    top: 1.5rem;
+    top: 3.0rem;
+    right: 2rem;
 }
 .container h1{
 
     position: relative;
     font-size: 2.5rem;
     bottom: 4.5rem;
-
+    left: 25rem;
 
 }
 .items
@@ -95,6 +96,7 @@ header
     height: 28rem;
     border-radius: 0.3rem;
     overflow-y: scroll;
+    border: 2px solid #bd5612;
 }
 .item_box
 {
@@ -119,9 +121,11 @@ li
 /*Menu lateral*/
 .button-containter
 {
+    position: relative;
+    top: 3rem;
     background-color: #EED9C4;
     padding: 3.125rem;
-    width: fit-content;
+    width: 22rem;
     border: 1px solid #bd5612;            
 }
 .button-containter .btn:hover{
