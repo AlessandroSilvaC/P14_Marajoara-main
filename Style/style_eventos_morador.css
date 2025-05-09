@@ -86,13 +86,14 @@ header
 
 .gallery-item {
     cursor: pointer;
-    max-width: 250px; /* Aumentei o tamanho máximo */
+
     text-align: center;
-    border: 2px solid #bd7f23; /* Adicionei uma borda */
+    border: 1px solid #bd7f23; /* Adicionei uma borda */
     border-radius: 10px; /* Bordas arredondadas */
-    padding: 10px; /* Espaçamento interno */
-    background-color: #eed9c4; /* Fundo do contêiner */
+    padding: 5px; /* Espaçamento interno */
+    background-color: #ffffff; /* Fundo do contêiner */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 23rem;
 }
 
 .gallery-img {
@@ -119,10 +120,12 @@ header
 /*Menu lateral*/
 .button-containter
 {
+    position: relative;
     background-color: #EED9C4;
     padding: 3.125rem;
-    width: fit-content;
+    width: 32rem;
     border: 1px solid #bd5612;
+    top: 5rem;
 }
 .button-containter .btn:hover{
     background-color:  #d57617b1;
