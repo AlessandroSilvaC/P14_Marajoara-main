@@ -76,7 +76,7 @@ header {
     top: 6rem;    
     background-color: #EED9C4;
     padding: 3.125rem;
-    width: fit-content;
+    width: 22rem;
     border: 1px solid #bd5612;
 }
 .button-containter .btn:hover{
@@ -128,7 +128,7 @@ main {
     left: 20rem;
     margin-left: 240px;
     padding: 1px;
-    width: 60rem;
+    width: 80rem;
     border: 1px solid #bd5612;  
     border-radius: 2rem
 }
