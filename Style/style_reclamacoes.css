@@ -1,11 +1,10 @@
 *
 {
     box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     list-style: none;
     text-decoration: none;
-    
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
@@ -17,7 +16,7 @@ body {
     background-color: #f9f9f9;
 }
 
-/*header*/
+/* Header */
 header {
     background-color: #eed9c4;
     display: flex;
@@ -28,30 +27,30 @@ header {
 }
 
 .img_logo {
-    height: 7rem;
+    height: 7rem; /* Ajustado para REM */
 }
 
 .img_nav_login {
-    height: 3.75rem;
+    height: 3.75rem; /* Ajustado para REM */
 }
 
 .nav_area_user {
     display: flex;
     align-items: baseline;
-    padding-right: 0.6rem;
-    position: relative; /* Necessário para posicionar o dropdown */
+    padding-right: 0.6rem; /* Ajustado para REM */
+    position: relative;
 }
 
 .dropdown-menu {
-    display: none; /* Esconde o menu por padrão */
+    display: none;
     position: absolute;
-    top: 50px; /* Ajuste para posicionar abaixo do ícone */
+    top: 3.125rem; /* Ajustado para REM */
     right: 0;
     background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 10px;
+    border: 0.0625rem solid #ccc; /* Ajustado para REM */
+    border-radius: 0.3125rem; /* Ajustado para REM */
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2); /* Ajustado para REM */
+    padding: 0.625rem; /* Ajustado para REM */
     z-index: 1000;
 }
 
@@ -60,7 +59,7 @@ header {
     color: #333;
     font-size: 1rem;
     display: block;
-    padding: 5px 10px;
+    padding: 0.3125rem 0.625rem; /* Ajustado para REM */
     transition: background-color 0.3s ease;
 }
 
@@ -68,27 +67,26 @@ header {
     background-color: #f0f0f0;
 }
 
-/*Menu lateral*/
-.button-containter
-{
+/* Menu lateral */
+.button-containter {
     position: relative;
-    left: 6rem;
-    top: 6rem;    
+    left: 6rem; /* Ajustado para REM */
+    top: 6rem; /* Ajustado para REM */
     background-color: #EED9C4;
-    padding: 3.125rem;
-    width: 22rem;
-    border: 1px solid #bd5612;
+    padding: 3.125rem; /* Ajustado para REM */
+    width: 22rem; /* Ajustado para REM */
+    border: 0.0625rem solid #bd5612; /* Ajustado para REM */
 }
-.button-containter .btn:hover{
-    background-color:  #d57617b1;
+
+.button-containter .btn:hover {
+    background-color: #d57617b1;
 }
-.btn
-{
-    
+
+.btn {
     background-color: antiquewhite;
-    font-size: 1.5rem;
-    padding: 1.3rem;
-    margin: 0.3125rem 0px 0.3125rem 0px;
+    font-size: 1.5rem; /* Ajustado para REM */
+    padding: 1.3rem; /* Ajustado para REM */
+    margin: 0.3125rem 0; /* Ajustado para REM */
     text-align: center;
     transition: 0.3s;
 }
@@ -96,94 +94,103 @@ header {
 .button-containter .btn a {
     text-decoration: none;
     color: #000;
-    
 }
 
 .button-containter .btn a:hover {
-    color: #ce6f17; /* Cor ao passar o mouse */
-    transition: color 0.1s ease; /* Animação suave */
-}
-/* Estilo para os links do menu lateral */
-.button-containter .btn a {
-    color: #000000; /* Cor padrão do texto */
-    text-decoration: none; /* Remove o sublinhado */
-    
+    color: #ce6f17;
+    transition: color 0.1s ease;
 }
 
-/* Cor ao passar o mouse */
-.button-containter .btn a:hover {
-    color: #ce6f17; /* Cor ao passar o mouse */
-    transition: color 0.1s ease; /* Animação suave */
-}
 .menu-text {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    
+    font-size: 1.8rem; /* Ajustado para REM */
+    margin-bottom: 1.25rem; /* Ajustado para REM */
 }
 
 /* Formulário de Reclamação */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ajusta o main para ocupar o espaço restante */
 main {
-    position: relative; 
-    bottom: 23rem;
-    left: 20rem;
-    margin-left: 240px;
-    padding: 1px;
-    width: 80rem;
-    border: 1px solid #bd5612;  
-    border-radius: 2rem
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.reclamacao-container {
+    margin: 0;
+    padding: 1.25rem; /* Ajustado para REM */
+    box-sizing: border-box;
+}
+
+main {
+    position: relative;
+    bottom: 25rem; /* Ajustado para REM */
+    left: 20rem; /* Ajustado para REM */
+    margin-left: 15rem; /* Ajustado para REM */
+    padding: 0.0625rem; /* Ajustado para REM */
+    width: 40rem; /* Ajustado para REM */
+    border: 0.0625rem solid #bd5612; /* Ajustado para REM */
+    border-radius: 2rem; /* Ajustado para REM */
 }
 
 .reclamacao-container {
     background-color: #fff;
-    padding: 30px;
-    border-radius: 2rem;
-
+    padding: 1.875rem; /* Ajustado para REM */
+    border-radius: 2rem; /* Ajustado para REM */
 }
 
 .reclamacao-container h1 {
     position: relative;
-    bottom: 6rem;
+    bottom: 6rem; /* Ajustado para REM */
     text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+    font-size: 2.5rem; /* Ajustado para REM */
+    margin-bottom: 1.25rem; /* Ajustado para REM */
     color: #000000;
-    
 }
 
 .input-group {
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem; /* Ajustado para REM */
 }
 
 .input-group label {
     position: relative;
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 0.5rem; /* Ajustado para REM */
     font-weight: bold;
     color: #333;
-    bottom: 3rem;
+    bottom: 3rem; /* Ajustado para REM */
 }
 
 .input-group input,
 .input-group textarea,
 .input-group select {
     position: relative;
-    bottom: 3rem;
+    bottom: 3rem; /* Ajustado para REM */
     width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    padding: 0.75rem; /* Ajustado para REM */
+    border: 0.0625rem solid #ccc; /* Ajustado para REM */
+    border-radius: 0.3125rem; /* Ajustado para REM */
     font-size: 1rem;
 }
 
 button[type="submit"] {
-    
     position: relative;
-    bottom: 2rem;
+    bottom: 2rem; /* Ajustado para REM */
     background-color: #bd5612;
     color: white;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 0.625rem 1.25rem; /* Ajustado para REM */
+    border-radius: 0.3125rem; /* Ajustado para REM */
     cursor: pointer;
     font-size: 1rem;
     transition: background-color 0.3s ease;
@@ -191,4 +198,82 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
     background-color: #a44b0f;
+}
+
+/* Responsividade para telas pequenas (máximo de 768px) */
+@media (max-width: 768px) {
+    /* Reorganiza o layout para que o menu lateral fique em cima */
+    .button-containter {
+        position: relative; /* Remove o deslocamento fixo */
+        left: 0; /* Remove o deslocamento horizontal */
+        top: 0; /* Remove o deslocamento vertical */
+        width: 100%; /* O menu ocupa toda a largura */
+        padding: 1.5rem; /* Ajusta o padding */
+        margin-bottom: 1.5rem; /* Adiciona espaço abaixo do menu */
+    }
+
+    /* Ajusta o formulário de reclamação */
+    main {
+        position: relative; /* Remove o deslocamento fixo */
+        bottom: 0; /* Remove o deslocamento vertical */
+        left: 0; /* Remove o deslocamento horizontal */
+        margin: 0 auto; /* Centraliza o conteúdo */
+        width: 90%; /* O conteúdo ocupa 90% da largura */
+        padding: 1rem; /* Ajusta o padding */
+    }
+
+    .reclamacao-container {
+        padding: 1.5rem; /* Ajusta o padding interno */
+        border-radius: 1rem; /* Ajusta as bordas arredondadas */
+    }
+
+    .reclamacao-container h1 {
+        font-size: 2rem; /* Reduz o tamanho da fonte */
+        bottom: 0; /* Remove o deslocamento vertical */
+    }
+
+    .input-group label,
+    .input-group input,
+    .input-group textarea,
+    .input-group select {
+        bottom: 0; /* Remove o deslocamento vertical */
+    }
+
+    button[type="submit"] {
+        bottom: 0; /* Remove o deslocamento vertical */
+        font-size: 1rem; /* Mantém o tamanho da fonte */
+        padding: 0.8rem 1.5rem; /* Ajusta o padding */
+    }
+}
+
+/* Responsividade para telas muito pequenas (máximo de 480px) */
+@media (max-width: 480px) {
+    .button-containter {
+        padding: 1rem; /* Reduz o padding */
+    }
+
+    main {
+        width: 100%; /* O conteúdo ocupa toda a largura */
+        padding: 0.8rem; /* Reduz o padding */
+    }
+
+    .reclamacao-container {
+        padding: 1rem; /* Reduz ainda mais o padding interno */
+    }
+
+    .reclamacao-container h1 {
+        font-size: 1.8rem; /* Reduz ainda mais o tamanho da fonte */
+    }
+
+    .input-group input,
+    .input-group textarea,
+    .input-group select {
+        font-size: 0.9rem; /* Ajusta o tamanho da fonte */
+        padding: 0.8rem; /* Ajusta o padding interno */
+    }
+
+    button[type="submit"] {
+        font-size: 0.9rem; /* Reduz o tamanho da fonte */
+        padding: 0.6rem 1rem; /* Ajusta o padding */
+    }
 }
