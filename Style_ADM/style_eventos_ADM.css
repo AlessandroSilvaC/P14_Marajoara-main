@@ -342,12 +342,6 @@ header {
     }
 }
 
-/* Scripts para abertura e fechamento do modal */
-// Abre o modal para adicionar um evento
-function openAddEventModal() {
-    const modal = document.getElementById("event-modal");
-    const modalTitle = document.getElementById("modal-title");
-    modalTitle.textContent = "Adicionar Evento"; // Define o título do modal
-    modal.style.display = "block"; // Exibe o modal
-}
+
+
 
