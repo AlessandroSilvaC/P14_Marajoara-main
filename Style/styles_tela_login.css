@@ -145,6 +145,15 @@ p a:hover {
 }
 
 /* Contêiner de Recuperação */
+.recovery-container {
+    position: relative;
+    
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
 .recovery-container h2 {
     margin-bottom: 20px;
     font-size: 1.5rem;
@@ -152,22 +161,21 @@ p a:hover {
 }
 
 .recovery-container .input-group {
-    margin-bottom: 15px;
+    margin-bottom: 1rem;
 }
 
-.recovery-container .input-group label {
+.recovery-container label {
     display: block;
-    margin-bottom: 5px;
-    font-size: 1rem;
-    color: #555;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
 }
 
-.recovery-container .input-group input {
+.recovery-container input, #recovery-container select {
     width: 100%;
-    padding: 10px;
-    font-size: 1rem;
+    padding: 0.5rem;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 0.25rem;
+    box-sizing: border-box;
 }
 
 .recovery-container button {
@@ -226,3 +234,147 @@ p a:hover {
 .register-container button:hover {
     background-color: #8B4513; 
 }
+
+/* Estilo para o contêiner da senha */
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Estilo para o campo de senha */
+.password-container input {
+    flex: 1;
+}
+
+/* Estilo para o ícone de olho */
+.toggle-password {
+    position: absolute;
+    right: 0.5rem;
+    cursor: pointer;
+    font-size: 1.25rem; /* Ajusta o tamanho do ícone */
+    color: #555;
+    user-select: none; /* Impede a seleção do ícone */
+}
+
+.toggle-password:hover {
+    color: #000; /* Muda a cor ao passar o mouse */
+}
+
+#password-warning {
+    color: red;
+    font-size: 0.875rem; /* 14px convertido para REM */
+    margin-top: 0.5rem;
+    display: none; /* Esconde o aviso por padrão */
+}
+
+#code-group {
+    margin-top: 1rem;
+}
+
+#code-group input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    box-sizing: border-box;
+}
+#code-error {
+    color: red;
+    font-size: 0.875rem; /* 14px */
+    margin-top: 0.5rem;
+    display: none; /* Esconde a mensagem por padrão */
+}
+
+/* Contêiner de Redefinição de Senha */
+.reset-password-container {
+   
+    position: relative;
+    left: 22rem;
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.reset-password-container .input-group {
+    margin-bottom: 1rem;
+}
+
+.reset-password-container label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.reset-password-container input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    box-sizing: border-box;
+}
+/* Estilo para o ícone de olho */
+.toggle-password1 {
+    position: absolute;
+    right: 2rem;
+    margin-top: 0.3rem;
+    cursor: pointer;
+    font-size: 1.25rem; /* Ajusta o tamanho do ícone */
+    color: #555;
+    user-select: none; /* Impede a seleção do ícone */
+}
+/* Responsividade para telas médias */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column; /* Empilha os elementos verticalmente */
+        justify-content: center; /* Centraliza os elementos */
+        gap: 1.25rem; /* Reduz o espaçamento entre os elementos */
+    }
+
+    header h1 {
+        font-size: 3rem; /* Reduz o tamanho do título */
+        left: 0;
+        text-align: center;
+    }
+
+    header p {
+        font-size: 1rem; /* Reduz o tamanho do texto */
+        left: 0;
+        bottom: 0;
+        text-align: center;
+    }
+
+    .login-container, .recovery-container, .register-container {
+        left: 0;
+        max-width: 90%; /* Ajusta a largura para caber na tela */
+        padding: 1.25rem; /* Reduz o padding */
+    }
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2.5rem; /* Reduz ainda mais o tamanho do título */
+    }
+
+    header p {
+        font-size: 0.875rem; /* Ajusta o tamanho do texto */
+    }
+
+    .login-container, .recovery-container, .register-container {
+        max-width: 100%; /* Ocupa toda a largura da tela */
+        padding: 1rem; /* Reduz o padding */
+    }
+
+    button {
+        font-size: 0.875rem; /* Reduz o tamanho do texto do botão */
+        padding: 0.625rem; /* Ajusta o padding do botão */
+    }
+
+    .input-group input {
+        font-size: 0.875rem; /* Ajusta o tamanho do texto dos inputs */
+        padding: 0.5rem; /* Reduz o padding dos inputs */
+    }
+}
+
