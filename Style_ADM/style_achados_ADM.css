@@ -57,6 +57,14 @@ header
 .dropdown-menu a:hover {
     background-color: #f0f0f0;
 }
+.title {
+    text-align: center;
+    font-size: 2.5rem; /* Ajustado para REM */
+    margin-bottom: 1.25rem; /* Ajustado para REM */
+    color: #000000;
+}
+
+
 /*container more*/
 .container-menu-containers
 {
@@ -84,14 +92,7 @@ header
     max-width: 90%; /* Reduz a largura máxima do container */
     box-sizing: border-box; /* Inclui bordas e paddings no tamanho total */
 }
-.container h1{
 
-    position: relative;
-    font-size: 2.5rem;
-    bottom: 4.5rem;
-    left: 25rem;
-
-}
 .items
 {
     background-color: #FACF7D;
