@@ -83,7 +83,14 @@ header {
     padding: 1.875rem; /* Ajustado para REM */
     margin-left: 3.125rem; /* Ajustado para REM */
 }
-
+.title {
+    position: relative;
+    text-align: center;
+    font-size: 2.5rem; /* Ajustado para REM */
+    bottom: 1rem;
+    margin-bottom: 0.25rem; /* Ajustado para REM */
+    color: #000000;
+}
 
 /* Menu lateral */
 .button-containter {
@@ -167,10 +174,16 @@ header {
     height: 30rem; /* Ajustado para REM */
     width: 50rem; /* Ajustado para REM */
     border-radius: 0.5rem; /* Ajustado para REM */
-    bottom: 1rem; /* Ajustado para REM */
+    top: 2rem; /* Ajustado para REM */
     border: 0.125rem solid #000000; /* Ajustado para REM */
 }
+#location-description {
 
+    position: relative;
+    margin-top: 3rem;
+
+
+}
 .reservation-container form {
     position: relative;
     flex: 1;
@@ -203,6 +216,32 @@ header {
 
 .reservation-container button:hover {
     background-color: #ce821e;
+}
+
+/* Novos estilos para os botões de tempo */
+#time-options {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.time-button {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.time-button:hover {
+    background-color: #ddd;
+}
+
+.time-button.selected {
+    background-color: #A0522D;
+    color: #fff;
+    border-color: #8B4513;
 }
 
 /* Responsividade para telas pequenas */
