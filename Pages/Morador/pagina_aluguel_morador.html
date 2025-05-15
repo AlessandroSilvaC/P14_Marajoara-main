@@ -7,6 +7,32 @@
 
     <link rel="stylesheet" href="../../Style/style_aluguel_morador.css">
     <link rel="stylesheet" href="../../index.html">
+    <style>
+        #time-options {
+            display: flex;
+            gap: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        .time-button {
+            padding: 0.5rem 1rem;
+            border: 1px solid #ccc;
+            border-radius: 0.25rem;
+            background-color: #f0f0f0;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .time-button:hover {
+            background-color: #ddd;
+        }
+
+        .time-button.selected {
+            background-color: #A0522D;
+            color: #fff;
+            border-color: #8B4513;
+        }
+    </style>
 </head>
 <body>
     <!--header-->
@@ -44,7 +70,7 @@
         </nav>
 
         <div class="reservation-container">
-            <h2>RESERVAR LOCAL</h2>
+             <h1 class="title">ALUGUEL</h1>
             <div class="reservation-content">
                 <!-- Imagem e descrição -->
                 <div class="location-info">
@@ -66,14 +92,19 @@
                     <input type="date" id="date" name="date" required>
 
                     <label for="time">Horário:</label>
-                    <input type="time" id="time" name="time" required>
+                    <div id="time-options">
+                        <button type="button" class="time-button" data-time="08:00-12:00" onclick="selectTime(this)">Manhã (08:00 - 12:00)</button>
+                        <button type="button" class="time-button" data-time="13:00-17:00" onclick="selectTime(this)">Tarde (13:00 - 17:00)</button>
+                        <button type="button" class="time-button" data-time="18:00-22:00" onclick="selectTime(this)">Noite (18:00 - 22:00)</button>
+                    </div>
+                    <input type="hidden" id="time" name="time" required>
 
                     <button type="submit">Reservar</button>
                 </form>
             </div>
         </div>
 
-        <script src="../../Scripts/script_eventos.js"></script>
+
         <script src="../../Scripts/script_aluguel.js"></script>
     </body>
     </html>
