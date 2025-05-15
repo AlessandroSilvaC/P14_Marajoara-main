@@ -6,7 +6,7 @@ function toggleDropdown() {
 
 function logout() {
                 // Redirecione para a página de login ou realize outra ação
-        window.location.href = '../../index.html';
+        window.location.href = '../index.html';
     }
 
     // Fecha o dropdown ao clicar fora dele
