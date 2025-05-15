@@ -1,23 +1,3 @@
-function showDescription(description) {
-        const descriptionDiv = document.getElementById('event-description');
-        descriptionDiv.textContent = description;
-        descriptionDiv.style.display = 'block';
-    }
-
-
-    function openPopup(imgSrc, description, date) {
-        const popup = document.getElementById('popup');
-        const popupImg = document.getElementById('popup-img');
-        const popupDescription = document.getElementById('popup-description');
-        const popupDate = document.getElementById('popup-date');
-
-        popupImg.src = imgSrc;
-        popupDescription.textContent = description;
-        popupDate.textContent = date;
-
-        popup.style.display = 'flex';
-    }
-
     function closePopup() {
         const popup = document.getElementById('popup');
         popup.style.display = 'none';
