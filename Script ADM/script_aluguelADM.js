@@ -6,7 +6,7 @@ function toggleDropdown() {
 
 function logout() {
                 // Redirecione para a página de login ou realize outra ação
-        window.location.href = '../../index.html';
+        window.location.href = '../index.html';
     }
 
     // Fecha o dropdown ao clicar fora dele
@@ -88,84 +88,15 @@ function updateLocationInfo() {
 
         calendar.render();
     });
-// Simulação de dias reservados
-const reservas = [
-    { location: "salão_de_festas", date: "2025-05-15" },
-    { location: "churrasqueira", date: "2025-05-16" },
-    { location: "quadra", date: "2025-05-17" },
-];
+function selectTime(button) {
+    // Remove a classe 'selected' de todos os botões
+    const buttons = document.querySelectorAll('.time-button');
+    buttons.forEach(btn => btn.classList.remove('selected'));
 
-let selectedDate = null; // Data selecionada pelo usuário
+    // Adiciona a classe 'selected' ao botão clicado
+    button.classList.add('selected');
 
-// Função para gerar o calendário
-function generateCalendar() {
-    const calendarContainer = document.getElementById("calendar");
-    const today = new Date();
-    const year = today.getFullYear();
-    const month = today.getMonth();
-
-    // Limpa o calendário
-    calendarContainer.innerHTML = "";
-
-    // Cria os dias do mês
-    const daysInMonth = new Date(year, month + 1, 0).getDate();
-    for (let day = 1; day <= daysInMonth; day++) {
-        const date = new Date(year, month, day);
-        const dateString = date.toISOString().split("T")[0];
-
-        // Cria o elemento do dia
-        const dayElement = document.createElement("div");
-        dayElement.classList.add("calendar-day");
-        dayElement.textContent = day;
-
-        // Verifica se o dia está reservado
-        const isReserved = reservas.some((reserva) => reserva.date === dateString);
-        if (isReserved) {
-            dayElement.classList.add("reserved");
-            dayElement.title = "Reservado";
-        } else {
-            dayElement.classList.add("available");
-            dayElement.title = "Disponível";
-            dayElement.onclick = () => selectDate(dateString, dayElement);
-        }
-
-        calendarContainer.appendChild(dayElement);
-    }
+    // Define o valor do horário no campo oculto
+    const timeInput = document.getElementById('time');
+    timeInput.value = button.getAttribute('data-time');
 }
-
-// Função para selecionar uma data
-function selectDate(date, element) {
-    selectedDate = date;
-
-    // Remove a seleção anterior
-    document.querySelectorAll(".calendar-day.selected").forEach((el) => {
-        el.classList.remove("selected");
-    });
-
-    // Marca o dia selecionado
-    element.classList.add("selected");
-}
-
-// Função para verificar a disponibilidade da data selecionada
-function checkSelectedDate() {
-    const messageElement = document.getElementById("availability-message");
-    const successMessageElement = document.getElementById("success-message");
-
-    if (!selectedDate) {
-        alert("Por favor, selecione uma data no calendário.");
-        return;
-    }
-
-    const isReserved = reservas.some((reserva) => reserva.date === selectedDate);
-
-    if (isReserved) {
-        messageElement.style.display = "block";
-        successMessageElement.style.display = "none";
-    } else {
-        messageElement.style.display = "none";
-        successMessageElement.style.display = "block";
-    }
-}
-
-// Gera o calendário ao carregar a página
-document.addEventListener("DOMContentLoaded", generateCalendar);
