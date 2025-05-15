@@ -1,12 +1,15 @@
-//pop up de log
-function toggleDropdown() {
+function closePopup() {
+        const popup = document.getElementById('popup');
+        popup.style.display = 'none';
+    }
+    function toggleDropdown() {
         const dropdown = document.getElementById('user-dropdown');
         dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
     }
 
-function logout() {
+    function logout() {
                 // Redirecione para a página de login ou realize outra ação
-        window.location.href = '../../index.html';
+        window.location.href = '../index.html';
     }
 
     // Fecha o dropdown ao clicar fora dele
