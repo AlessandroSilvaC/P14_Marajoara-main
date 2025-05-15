@@ -6,7 +6,7 @@
     <title>MARAJOARA</title>
 
     <link rel="stylesheet" href="../Style_ADM/style_aluguel_ADM.css">
-    <link rel="stylesheet" href="../../index.html">
+ 
 </head>
 <body>
     <!--header-->
@@ -44,7 +44,7 @@
         </nav>
 
         <div class="reservation-container">
-            <h2>RESERVAR LOCAL</h2>
+            <h1 class="title">ALUGUEL</h1>
             <div class="reservation-content">
                 <!-- Imagem e descrição -->
                 <div class="location-info">
@@ -66,10 +66,18 @@
                     <input type="date" id="date" name="date" required>
 
                     <label for="time">Horário:</label>
-                    <input type="time" id="time" name="time" required>
+                    <div id="time-options">
+                        <button type="button" class="time-button" data-time="08:00-12:00" onclick="selectTime(this)">Manhã (08:00 - 12:00)</button>
+                        <button type="button" class="time-button" data-time="13:00-17:00" onclick="selectTime(this)">Tarde (13:00 - 17:00)</button>
+                        <button type="button" class="time-button" data-time="18:00-22:00" onclick="selectTime(this)">Noite (18:00 - 22:00)</button>
+                    </div>
+                    <input type="hidden" id="time" name="time" required>
 
                     <button type="submit">Reservar</button>
                 </form>
+            </div>
+        </div>
+              
 
                 <!-- Mensagem de disponibilidade -->
                 <p id="availability-message" style="color: red; display: none;">Este horário já está reservado. Por favor, escolha outro.</p>
