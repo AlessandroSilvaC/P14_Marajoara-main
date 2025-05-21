@@ -365,7 +365,7 @@ p a:hover {
     .login-container, .recovery-container, .register-container {
         max-width: 100%; /* Ocupa toda a largura da tela */
         padding: 1rem; /* Reduz o padding */
-    }
+    } 
 
     button {
         font-size: 0.875rem; /* Reduz o tamanho do texto do botão */
