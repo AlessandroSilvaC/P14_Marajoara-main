@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MARAJOARA</title>
 
-    <link rel="stylesheet" href="../../Style/style_eventos_morador.css">
+    <link rel="stylesheet" href="../../Style/style_aluguel_morador.css">
     <link rel="stylesheet" href="../../index.html">
+   
 </head>
 <body>
     <!--header-->
-    <header>
-        <a href="../Morador/pagina_eventos.html">
+   <header>
+       <a href="../Morador/pagina_eventos.html">
                 <img class="img_logo" src="../../imgs/img_logo.jpg" alt="Logo Marajoara">
             </a>
         <div class="nav_area_user">
@@ -43,44 +44,43 @@
                 <a href="../Morador/pagina_reclamacoes_morador.html">RECLAMAÇÕES</a>
             </div>
         </nav>
-        <!--container-->
-<div class="container">
-    <h1 class="title">EVENTOS</h1>
-    <!--galeria-->
-    <div class="gallery">
-        <div class="gallery-item" onclick="openPopup('../../imgs/img6.jpg', 'Descrição do evento 1', 'Dia 10/05/2025')">
-            <img src="../../imgs/img6.jpg" alt="Evento 1" class="gallery-img">
-        </div>
-        <div class="gallery-item" onclick="openPopup('../../imgs/img6.jpg', 'Descrição do evento 2', 'Dia 15/05/2025')">
-            <img src="../../imgs/img6.jpg" alt="Evento 2" class="gallery-img">
-        </div>
-        <div class="gallery-item" onclick="openPopup('../../imgs/img7.jpg', 'Descrição do evento 3', 'Dia 20/05/2025')">
-            <img src="../../imgs/img7.jpg" alt="Evento 3" class="gallery-img">
-        </div>
-        <div class="gallery-item" onclick="openPopup('../../imgs/img7.jpg', 'Descrição do evento 4', 'Dia 25/05/2025')">
-            <img src="../../imgs/img7.jpg" alt="Evento 4" class="gallery-img">
-        </div>
-        <div class="gallery-item" onclick="openPopup('../../imgs/img6.jpg', 'Descrição do evento 5', 'Dia 30/05/2025')">
-            <img src="../../imgs/img6.jpg" alt="Evento 5" class="gallery-img">
-        </div>
-        <div class="gallery-item" onclick="openPopup('../../imgs/img7.jpg', 'Descrição do evento 6', 'Dia 05/06/2025')">
-            <img src="../../imgs/img7.jpg" alt="Evento 6" class="gallery-img">
-        </div>
-    </div>
-</div>
 
-<!-- Popup -->
-<div id="popup" class="popup">
-    <div class="popup-content">
-        <span class="close-btn" onclick="closePopup()">&times;</span>
-        <img id="popup-img" src="" alt="Evento" class="popup-img">
-        <p id="popup-description" class="popup-description"></p>
-        <p id="popup-date" class="popup-date"></p>
-    </div>
-</div>
+        <div class="reservation-container">
+             <h1 class="title">ALUGUEL</h1>
+            <div class="reservation-content">
+                <!-- Imagem e descrição -->
+                <div class="location-info">
+                    <img id="location-image" src="../../imgs/salao_de_festas.jpg" alt="Salão de Festas" class="location-image">
+                    <p id="location-description">Salão de Festas: Ideal para comemorações e eventos sociais.</p>
+                </div>
 
-<script src="../../Scripts/script_eventos.js"></script>
+                <!-- Formulário -->
+                <form id="reservation-form">
+                    <label for="location">Selecione o local:</label>
+                    <select id="location" name="location" required onchange="updateLocationInfo()">
+                        <option value="salão_de_festas" data-img="../../imgs/salao_de_festas.jpg" data-desc="Salão de Festas: Ideal para comemorações e eventos sociais.">Salão de Festas</option>
+                        <option value="churrasqueira" data-img="../../imgs/churrasqueira.jpg" data-desc="Churrasqueira: Perfeita para churrascos e encontros ao ar livre.">Churrasqueira</option>
+                        <option value="quadra" data-img="../../imgs/quadra.jpg" data-desc="Quadra: Ótima para esportes e atividades físicas.">Quadra</option>
+                        <option value="piscina" data-img="../../imgs/piscina.jpg" data-desc="Piscina: Excelente para relaxar e se divertir.">Piscina</option>
+                    </select>
+
+                    <label for="date">Data:</label>
+                    <input type="date" id="date" name="date" required>
+
+                    <label for="time">Horário:</label>
+                    <div id="time-options">
+                        <button type="button" class="time-button" data-time="08:00-12:00" onclick="selectTime(this)">Manhã (08:00 - 12:00)</button>
+                        <button type="button" class="time-button" data-time="13:00-17:00" onclick="selectTime(this)">Tarde (13:00 - 17:00)</button>
+                        <button type="button" class="time-button" data-time="18:00-22:00" onclick="selectTime(this)">Noite (18:00 - 22:00)</button>
+                    </div>
+                    <input type="hidden" id="time" name="time" required>
+
+                    <button type="submit">Reservar</button>
+                </form>
+            </div>
+        </div>
 
 
-</body>
-</html>
+        <script src="../../Scripts/script_aluguel.js"></script>
+    </body>
+    </html>
