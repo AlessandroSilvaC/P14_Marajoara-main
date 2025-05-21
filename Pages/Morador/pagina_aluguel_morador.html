@@ -7,44 +7,20 @@
 
     <link rel="stylesheet" href="../../Style/style_aluguel_morador.css">
     <link rel="stylesheet" href="../../index.html">
-    <style>
-        #time-options {
-            display: flex;
-            gap: 1rem;
-            margin-top: 0.5rem;
-        }
-
-        .time-button {
-            padding: 0.5rem 1rem;
-            border: 1px solid #ccc;
-            border-radius: 0.25rem;
-            background-color: #f0f0f0;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .time-button:hover {
-            background-color: #ddd;
-        }
-
-        .time-button.selected {
-            background-color: #A0522D;
-            color: #fff;
-            border-color: #8B4513;
-        }
-    </style>
+   
 </head>
 <body>
     <!--header-->
-    <header>
-        <div class="nav_logo">
-            <img class="img_logo" src="../../imgs/img_logo.jpg">
-        </div>
+   <header>
+       <a href="../Morador/pagina_eventos.html">
+                <img class="img_logo" src="../../imgs/img_logo.jpg" alt="Logo Marajoara">
+            </a>
         <div class="nav_area_user">
             <p class="p_nav">Olá, Fulano!</p>
             <img class="img_nav_login" src="../../imgs/img_profile_icon.png" alt="" onclick="toggleDropdown()">
             <div id="user-dropdown" class="dropdown-menu">
-                <a href="#" onclick="logout()">Sair</a>
+            <a href="../Morador/pagina_perfil_morador.html">Perfil</a>    
+            <a href="#" onclick="logout()">Sair</a>
             </div>
         </div>
     </header>
