@@ -79,7 +79,7 @@ function salvarAlteracoes() {
     document.querySelector('.salvar-btn').style.display = 'none';
 }
 function closePopup() {
-        const popup = document.getElementById('popup');
+        const popup = document.getElementById('popup'); 
         popup.style.display = 'none';
     }
     function toggleDropdown() {
