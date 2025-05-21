@@ -165,7 +165,7 @@ document.getElementById('recoveryForm').addEventListener('submit', (e) => {
         codeError.textContent = 'Código inválido. Tente novamente.';
         codeError.style.display = 'block'; // Exibe a mensagem de erro
     }
-});
+}); 
 
 document.getElementById('resetPasswordForm').addEventListener('submit', (e) => {
     e.preventDefault();
